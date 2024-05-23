@@ -1,18 +1,19 @@
 #include <Arduino.h>
 
-const int led = 0;
-const int sleep = 100;
+const int speakerPin = 5; // Change this to the PWM-capable pin you've connected the speaker to
+const unsigned int frequency = 20000; // 20 kHz
 
-// the setup routine runs once when you press reset:
-void setup() {
-  // initialize the digital pin as an output.
-  pinMode(led, OUTPUT);
+void setup()
+{
+    pinMode(speakerPin, OUTPUT);
+    Serial.begin(115200);
+
 }
 
-// the loop routine runs over and over again forever
-void loop() {
-  digitalWrite(led, HIGH); // turn the LED on (HIGH is the voltage level)
-  delay(sleep);            // wait for a second
-  digitalWrite(led, LOW);  // turn the LED off by making the voltage LOW
-  delay(sleep);            // wait for a second
+void loop()
+{
+    analogWrite(speakerPin, 255); // Adjust this value to increase or decrease volume (0-255)
+    tone(speakerPin, frequency);
+    Serial.print("tone on");
+    delay(20000);
 }
