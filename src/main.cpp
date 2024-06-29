@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-const int speakerPin = 1; // Change this to the PWM-capable pin you've connected the speaker to
-const int pirPin = A1; // Define the pin connected to the PIR sensor
+const int speakerPin = 0; // Change this to the PWM-capable pin you've connected the speaker to
+const int pirPin = A3; // Define the pin connected to the PIR sensor
 const unsigned int frequency = 20000; // 20 kHz
 
 void setup()
