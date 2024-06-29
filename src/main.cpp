@@ -17,10 +17,10 @@ void loop()
     if (pirState == HIGH) // If motion is detected
     {
         tone(speakerPin, frequency); // Generate 20 kHz tone on the specified pin
-        delay(10000); // Keep the tone on for 10 seconds
+        delay(5000); // Keep the tone on for 5 seconds
         noTone(speakerPin); // Turn off the tone
     }
     
-    delay(500); // Small delay to avoid multiple triggers
+    delay(1000); // Small delay to avoid multiple triggers
 }
     
