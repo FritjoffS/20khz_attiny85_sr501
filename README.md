@@ -8,7 +8,7 @@ My connection goes as follows:
 From 12V battery to input of LM2596, this steps down to 5.5V.
 From LM2596 to vcc and ground on attiny85. Speaker is connected to PB0 and ground on attiny and SR501 to A3 and ground.
 
-        + ---     ---          PB0 --- Speaker
+        + ---     ---          PB1 --- Speaker
 Battery      LM2596  Attiny85  A3  --- SR501
         - ---     ---          GND ---/
 ```
